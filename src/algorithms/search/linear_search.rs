@@ -1,5 +1,25 @@
 use std::cmp::PartialEq;
 
+/// Finds the specified element inside a list of elements
+///
+/// # Arguments 🧩
+///
+/// * `items` the list of items of type `&[T]`
+/// * `target` the specified element to find of type `&T`
+///
+/// # Returns ⏎
+///
+/// * `Option<usize>`
+///
+/// # Examples 👀
+///
+/// ```
+/// let list_of_items = [1, 2, 3, 4, 5];
+/// let item = 3;
+///
+/// let index = linear_search(&list_of_items, &item);
+/// assert_eq!(index, Some(2));
+/// ```
 pub fn linear_search<T: PartialEq>(items: &[T], target: &T) -> Option<usize> {
     for (index, value) in items.iter().enumerate() {
         if value == target {

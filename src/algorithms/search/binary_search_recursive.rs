@@ -1,4 +1,30 @@
 use std::cmp::Ordering;
+
+/// Finds the specified element inside a list of elements
+///
+/// # Arguments 🧩
+///
+/// * `items` the list of items of type `&[T]`
+/// * `target` the specified element to find of type `&T`
+/// * `left` the left most index of type `usize`
+/// * `right` the right most index of type `usize`
+///
+/// # Returns ⏎
+///
+/// * `Option<usize>`
+///
+/// # Examples 👀
+///
+/// ```
+/// let list_of_items = [1, 2, 3, 4, 5];
+/// let item = 3;
+///
+/// let left = 0;
+/// let right = list_of_items.len();
+///
+/// let index = linear_search_recursive(&list_of_items, &item, &left, &right);
+/// assert_eq!(index, Some(2));
+/// ```
 pub fn binary_search_recursive<T: Ord>(
     items: &[T],
     target: &T,

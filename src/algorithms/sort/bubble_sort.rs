@@ -1,3 +1,25 @@
+/// Sorts the elements inside a list
+///
+/// # Arguments 🧩
+///
+/// * `arr` the list_of_items to be sorted of type `&mut [T]`
+///
+/// # Returns ⏎
+///
+/// * `()`
+///
+/// # Examples 👀
+///
+/// ```
+/// let mut list_of_items = [13, 5, 1,5];
+///
+/// bubble_sort(&mut list_of_items);
+///
+/// for i in 0..list_of_items.len() -1 {
+/// assert!(list_of_items[i] <= list_of_items[i + 1])
+/// }
+///
+/// ```
 pub fn bubble_sort<T: Ord>(arr: &mut [T]) {
     let mut sorted = false;
     let mut n = arr.len();
